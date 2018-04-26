@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/guess.css') }}">
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='js/counter.js') }}"></script>-->
+    <title>Counter</title> 
+</head>
+<body>
+    <div class="wrapper">
+        <h3>Welcome to the Great Number Game</h3>
+        <p>I am thinking of a number between 1 to 100</p>
+        <p>Take a guess!</p>
+
+        <div class="{{colorbox}}">
+            <h2>{{message}}</h2>
+            {{ button }}
+        </div>
+
+        <form action="/guessNum" method="post">
+            <input type="text" name="guess" value="">
+            <input type="submit" name="button" value="Submit">
+        </form>
+    </div>
+</body>
+</html>
